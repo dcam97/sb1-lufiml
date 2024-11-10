@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-emerald-900 text-white min-h-screen;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    filter: drop-shadow(0 0 0.5rem rgba(52, 211, 153, 0.2));
+  }
+  50% {
+    filter: drop-shadow(0 0 1rem rgba(52, 211, 153, 0.6));
+  }
+}
+
+@keyframes seedPulse {
+  0%, 100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 0.2rem rgba(52, 211, 153, 0.3));
+  }
+  50% {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 0.5rem rgba(52, 211, 153, 0.5));
+  }
+}
+
+@keyframes mature {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+    filter: brightness(2) drop-shadow(0 0 1rem rgba(52, 211, 153, 0.8));
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.8;
+    filter: brightness(1.5) drop-shadow(0 0 2rem rgba(52, 211, 153, 1));
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+    filter: brightness(1) drop-shadow(0 0 0.5rem rgba(52, 211, 153, 0.4));
+  }
+}
+
+@keyframes leaf-1 {
+  0% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+  100% { transform: translate(-150%, -150%) scale(0); opacity: 0; }
+}
+
+@keyframes leaf-2 {
+  0% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+  100% { transform: translate(150%, -150%) scale(0); opacity: 0; }
+}
+
+@keyframes leaf-3 {
+  0% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+  100% { transform: translate(-150%, 150%) scale(0); opacity: 0; }
+}
+
+@keyframes leaf-4 {
+  0% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+  100% { transform: translate(150%, 150%) scale(0); opacity: 0; }
+}
+
+.animate-bounce {
+  animation: bounce 0.5s ease-out forwards;
+}
+
+.animate-glow {
+  animation: glow 2s ease-in-out infinite;
+}
+
+.animate-seed-pulse {
+  animation: seedPulse 1.5s ease-in-out infinite;
+}
+
+.animate-mature {
+  animation: mature 0.8s ease-out forwards;
+}
+
+.animate-leaf-1 {
+  animation: leaf-1 1s ease-out forwards;
+}
+
+.animate-leaf-2 {
+  animation: leaf-2 1s ease-out forwards;
+}
+
+.animate-leaf-3 {
+  animation: leaf-3 1s ease-out forwards;
+}
+
+.animate-leaf-4 {
+  animation: leaf-4 1s ease-out forwards;
+}
